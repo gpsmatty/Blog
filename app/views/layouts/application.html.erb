@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vagrant</title>
+  <title>gpsmatty</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<%= render partial: 'shared/nav' %>
+
+<div class="container">
+
 <%= yield %>
+
+</div>
+
+
+<%= render 'shared/footer' %>
+
 
 </body>
 </html>
