@@ -1,6 +1,11 @@
-<% @posts.each do |post| %>
-  <div class="post_wrapper">
+
+<div class="post-wrapper">
+  <% @posts.each do |post| %>
     <h2 class="title"><%= link_to post.title, post %></h2>
+    <p>
+    <h5 class="description"><%= link_to post.description, post %></h5>
+    </p>
     <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
-  </div>
-<% end %>
+      <hr>
+    <% end %>
+</div>
