@@ -1,41 +1,45 @@
-
-
-@import "bootstrap";
+@import 'bootstrap';
 
 html {
+  min-height: 100%;
   position: relative;
-  min-height: 100%
 }
 
+.nav-link {
+  color: white;
+  padding-right: 25%;
+}
 
 .intro-header {
-  background: url(/assets/Home-BG.jpg)  center center fixed;
-    background-color: #777777;
+  background: url('/assets/Home-BG.jpg')  center center fixed;
+  background-attachment: scroll;
+  background-color: #77777;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-bottom: 50px;
+}
 
-    background-attachment: scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    margin-bottom: 50px;
-  }
+.intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+  color: white;
+  padding: 100px 0 50px;
+}
+
+@media only screen and (min-width: 768px) {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 100px 0 50px;
-    color: white;
-  }
-  @media only screen and (min-width: 768px) {
-    .intro-header .site-heading,
-    .intro-header .post-heading,
-    .intro-header .page-heading {
-      padding: 150px 0;
+  padding: 150px 0;
     }
-  }
+}
   .intro-header .site-heading,
   .intro-header .page-heading {
     text-align: center;
   }
+
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
     margin-top: 0;
@@ -89,21 +93,17 @@ html {
 
 }
 
-.post_wrapper {
+.post-wrapper {
   color: red;
   text-align: center;
-  border-style: solid;
-  border-color: red;
-  border-width: 1px;
-  margin-bottom: 10px;
   }
 
 
   #default-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     background: $gray-light;
+    bottom: 0;
     margin-top: 5px;
     color: white;
+    position: absolute;
+    width: 100%;
   }
