@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all.order('created_at DESC')
+    @header = true
   end
   def new
   end
@@ -14,6 +15,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @header = false
   end
 
   def edit
@@ -23,15 +25,15 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    if @post.update(params[:post].permit(:title, :body))
+    if @post.update(params[:post].permit(:title, :description, :body))
       redirect_to @post
     else
       render 'edit'
     end
   end
-  
+
   private
       def post_params
-        params.require(:post).permit(:title, :body)
+        params.require(:post).permit(:title, :description, :body)
       end
 end
